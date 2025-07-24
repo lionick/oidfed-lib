@@ -164,7 +164,30 @@ type EntityCollector interface {
 // SimpleEntityCollector is an EntityCollector that collects entities in a
 // federation
 type SimpleEntityCollector struct {
-	visitedEntities *strset.Set
+	visitedEntities *mutexedStrSet
+}
+
+type mutexedStrSet struct {
+	set   *strset.Set
+	mutex sync.RWMutex
+}
+
+func (ms *mutexedStrSet) Has(s ...string) bool {
+	ms.mutex.RLock()
+	defer ms.mutex.RUnlock()
+	return ms.set.Has(s...)
+}
+
+func (ms *mutexedStrSet) Add(s ...string) {
+	ms.mutex.Lock()
+	defer ms.mutex.Unlock()
+	ms.set.Add(s...)
+}
+
+func newMutexedStrSet() *mutexedStrSet {
+	return &mutexedStrSet{
+		set: strset.New(),
+	}
 }
 
 // SimpleOPCollector is an EntityCollector that uses the
@@ -218,7 +241,7 @@ type FilterableVerifiedChainsEntityCollector struct {
 
 // CollectEntities implements the EntityCollector interface
 func (d *SimpleEntityCollector) CollectEntities(req apimodel.EntityCollectionRequest) (entities []*CollectedEntity) {
-	d.visitedEntities = strset.New()
+	d.visitedEntities = newMutexedStrSet()
 	return d.collect(req, NewTrustAnchorsFromEntityIDs(req.TrustAnchor)...)
 }
 
