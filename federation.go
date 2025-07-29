@@ -131,11 +131,19 @@ func (f FederationLeaf) ResolveOPMetadata(issuer string) (*OpenIDProviderMetadat
 	var opm OpenIDProviderMetadata
 	set, err := cache.Get(cache.Key(cache.KeyOPMetadata, issuer), &opm)
 	if err != nil {
-		return nil, err
+		log.Errorf("Failed to get cached OP metadata for issuer %s: %v", issuer, err)
+	} else if set {
+		// Validate cached metadata
+		if opm.TokenEndpoint == "" {
+			log.Warnf("Cached OP metadata for issuer %s is missing TokenEndpoint, fetching fresh metadata", issuer)
+		} else {
+			log.Infof("Using cached OP metadata for issuer %s", issuer)
+			return &opm, nil
+		}
+	} else {
+		log.Infof("No cached OP metadata found for issuer %s, fetching fresh metadata", issuer)
 	}
-	if set {
-		return &opm, nil
-	}
+
 	metadata, err := DefaultMetadataResolver.Resolve(
 		apimodel.ResolveRequest{
 			Subject:     issuer,
@@ -144,7 +152,11 @@ func (f FederationLeaf) ResolveOPMetadata(issuer string) (*OpenIDProviderMetadat
 		},
 	)
 	if err != nil {
+		log.Errorf("Failed to resolve OP metadata for issuer %s: %v", issuer, err)
 		return nil, errors.Wrap(err, "no trust chain with valid metadata found")
 	}
+
+	log.Infof("Successfully resolved fresh OP metadata for issuer %s", issuer)
 	return metadata.OpenIDProvider, nil
 }
+
