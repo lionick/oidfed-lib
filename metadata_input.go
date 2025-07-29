@@ -1,7 +1,7 @@
 package oidfed
 
 import (
-	"github.com/go-oidfed/lib/jwks"
+	"github.com/lionick/oidfed-lib/jwks"
 )
 
 //go:generate go run internal/generators/metadata.go

@@ -1,7 +1,7 @@
 package oidfed
 
 import (
-	"github.com/go-oidfed/lib/internal"
+	"github.com/lionick/oidfed-lib/internal"
 )
 
 // EnableDebugLogging enables debug logging

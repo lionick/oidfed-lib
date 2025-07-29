@@ -9,7 +9,7 @@ import (
 	"github.com/pkg/errors"
 	"github.com/vmihailenco/msgpack/v5"
 
-	"github.com/go-oidfed/lib/internal"
+	"github.com/lionick/oidfed-lib/internal"
 )
 
 // Cache is an interface for caching data

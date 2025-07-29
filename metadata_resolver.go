@@ -6,11 +6,11 @@ import (
 	"github.com/google/go-querystring/query"
 	"github.com/pkg/errors"
 
-	"github.com/go-oidfed/lib/apimodel"
-	"github.com/go-oidfed/lib/internal"
-	"github.com/go-oidfed/lib/internal/http"
-	"github.com/go-oidfed/lib/internal/jwx"
-	"github.com/go-oidfed/lib/oidfedconst"
+	"github.com/lionick/oidfed-lib/apimodel"
+	"github.com/lionick/oidfed-lib/internal"
+	"github.com/lionick/oidfed-lib/internal/http"
+	"github.com/lionick/oidfed-lib/internal/jwx"
+	"github.com/lionick/oidfed-lib/oidfedconst"
 )
 
 // MetadataResolver is type for resolving the metadata from a StartingEntity to

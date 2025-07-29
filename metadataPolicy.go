@@ -7,7 +7,7 @@ import (
 	"github.com/pkg/errors"
 	"tideland.dev/go/slices"
 
-	"github.com/go-oidfed/lib/internal/utils"
+	"github.com/lionick/oidfed-lib/internal/utils"
 )
 
 // MetadataPolicies is a type for holding the different MetadataPolicy

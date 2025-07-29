@@ -14,9 +14,9 @@ import (
 	"github.com/luci/go-render/render"
 	"github.com/vmihailenco/msgpack/v5"
 
-	"github.com/go-oidfed/lib/internal/utils"
-	"github.com/go-oidfed/lib/jwks"
-	"github.com/go-oidfed/lib/unixtime"
+	"github.com/lionick/oidfed-lib/internal/utils"
+	"github.com/lionick/oidfed-lib/jwks"
+	"github.com/lionick/oidfed-lib/unixtime"
 )
 
 type marshalData struct {

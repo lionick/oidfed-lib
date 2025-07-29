@@ -5,8 +5,8 @@ import (
 
 	arrops "github.com/adam-hanna/arrayOperations"
 
-	"github.com/go-oidfed/lib/internal/utils"
-	"github.com/go-oidfed/lib/oidfedconst"
+	"github.com/lionick/oidfed-lib/internal/utils"
+	"github.com/lionick/oidfed-lib/oidfedconst"
 )
 
 var rp1 = newMockRP(

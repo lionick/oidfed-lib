@@ -8,11 +8,11 @@ import (
 	"github.com/pkg/errors"
 	"gopkg.in/yaml.v3"
 
-	"github.com/go-oidfed/lib/apimodel"
-	"github.com/go-oidfed/lib/internal/jwx"
-	"github.com/go-oidfed/lib/jwks"
-	"github.com/go-oidfed/lib/oidfedconst"
-	"github.com/go-oidfed/lib/unixtime"
+	"github.com/lionick/oidfed-lib/apimodel"
+	"github.com/lionick/oidfed-lib/internal/jwx"
+	"github.com/lionick/oidfed-lib/jwks"
+	"github.com/lionick/oidfed-lib/oidfedconst"
+	"github.com/lionick/oidfed-lib/unixtime"
 )
 
 // TrustMarkInfos is a slice of TrustMarkInfo

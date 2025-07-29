@@ -1,4 +1,4 @@
-module github.com/go-oidfed/lib
+module github.com/lionick/oidfed-lib
 
 go 1.23.0
 

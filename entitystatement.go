@@ -7,12 +7,12 @@ import (
 	"github.com/vmihailenco/msgpack/v5"
 	"gopkg.in/yaml.v3"
 
-	"github.com/go-oidfed/lib/internal"
-	"github.com/go-oidfed/lib/internal/jwx"
-	"github.com/go-oidfed/lib/internal/utils"
-	"github.com/go-oidfed/lib/jwks"
-	"github.com/go-oidfed/lib/oidfedconst"
-	"github.com/go-oidfed/lib/unixtime"
+	"github.com/lionick/oidfed-lib/internal"
+	"github.com/lionick/oidfed-lib/internal/jwx"
+	"github.com/lionick/oidfed-lib/internal/utils"
+	"github.com/lionick/oidfed-lib/jwks"
+	"github.com/lionick/oidfed-lib/oidfedconst"
+	"github.com/lionick/oidfed-lib/unixtime"
 
 	"github.com/fatih/structs"
 )

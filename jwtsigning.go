@@ -8,9 +8,9 @@ import (
 	"github.com/lestrrat-go/jwx/v3/jwk"
 	"github.com/pkg/errors"
 
-	"github.com/go-oidfed/lib/internal/jwx"
-	"github.com/go-oidfed/lib/jwks"
-	"github.com/go-oidfed/lib/oidfedconst"
+	"github.com/lionick/oidfed-lib/internal/jwx"
+	"github.com/lionick/oidfed-lib/jwks"
+	"github.com/lionick/oidfed-lib/oidfedconst"
 )
 
 // JWTSigner is an interface that can give signed jwts

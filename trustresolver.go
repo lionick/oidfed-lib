@@ -11,13 +11,13 @@ import (
 	"github.com/vmihailenco/msgpack/v5"
 	"golang.org/x/crypto/sha3"
 
-	"github.com/go-oidfed/lib/cache"
-	"github.com/go-oidfed/lib/internal"
-	"github.com/go-oidfed/lib/internal/http"
-	"github.com/go-oidfed/lib/internal/jwx"
-	"github.com/go-oidfed/lib/internal/utils"
-	"github.com/go-oidfed/lib/oidfedconst"
-	"github.com/go-oidfed/lib/unixtime"
+	"github.com/lionick/oidfed-lib/cache"
+	"github.com/lionick/oidfed-lib/internal"
+	"github.com/lionick/oidfed-lib/internal/http"
+	"github.com/lionick/oidfed-lib/internal/jwx"
+	"github.com/lionick/oidfed-lib/internal/utils"
+	"github.com/lionick/oidfed-lib/oidfedconst"
+	"github.com/lionick/oidfed-lib/unixtime"
 )
 
 // ResolverCacheGracePeriod is a grace period for the resolver.

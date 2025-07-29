@@ -1,7 +1,7 @@
 package oidfed
 
 import (
-	"github.com/go-oidfed/lib/jwks"
+	"github.com/lionick/oidfed-lib/jwks"
 )
 
 // TrustAnchor is a type for specifying trust anchors

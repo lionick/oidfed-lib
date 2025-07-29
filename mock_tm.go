@@ -10,8 +10,8 @@ import (
 
 	"github.com/lestrrat-go/jwx/v3/jwa"
 
-	"github.com/go-oidfed/lib/jwks"
-	"github.com/go-oidfed/lib/unixtime"
+	"github.com/lionick/oidfed-lib/jwks"
+	"github.com/lionick/oidfed-lib/unixtime"
 )
 
 type mockTMI struct {

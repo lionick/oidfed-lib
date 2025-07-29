@@ -7,9 +7,9 @@ import (
 	"github.com/lestrrat-go/jwx/v3/jwt"
 	"github.com/pkg/errors"
 
-	"github.com/go-oidfed/lib/internal"
-	"github.com/go-oidfed/lib/internal/http"
-	"github.com/go-oidfed/lib/unixtime"
+	"github.com/lionick/oidfed-lib/internal"
+	"github.com/lionick/oidfed-lib/internal/http"
+	"github.com/lionick/oidfed-lib/unixtime"
 )
 
 // EntityConfigurationTrustMarkConfig is a type for specifying the configuration of a TrustMark that should be

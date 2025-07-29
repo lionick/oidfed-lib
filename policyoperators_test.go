@@ -3,7 +3,7 @@ package oidfed
 import (
 	"testing"
 
-	"github.com/go-oidfed/lib/internal/utils"
+	"github.com/lionick/oidfed-lib/internal/utils"
 )
 
 func TestPolicyOperatorAddMerge(t *testing.T) {

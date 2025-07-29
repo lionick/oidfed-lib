@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"testing"
 
-	"github.com/go-oidfed/lib/internal/jwx"
+	"github.com/lionick/oidfed-lib/internal/jwx"
 )
 
 func TestRequestObjectProducer_RequestObject(t *testing.T) {

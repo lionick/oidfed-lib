@@ -3,8 +3,8 @@ package oidfed
 import (
 	"testing"
 
-	"github.com/go-oidfed/lib/apimodel"
-	"github.com/go-oidfed/lib/internal/utils"
+	"github.com/lionick/oidfed-lib/apimodel"
+	"github.com/lionick/oidfed-lib/internal/utils"
 )
 
 func TestSimpleOPCollector_CollectEntities(t *testing.T) {

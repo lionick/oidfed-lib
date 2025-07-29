@@ -5,7 +5,7 @@ import (
 	"encoding/json"
 	"reflect"
 
-	"github.com/go-oidfed/lib/jwks"
+	"github.com/lionick/oidfed-lib/jwks"
 
 	"github.com/pkg/errors"
 	"github.com/vmihailenco/msgpack/v5"
